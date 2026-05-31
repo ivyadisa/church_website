@@ -5,7 +5,7 @@ import { useState } from "react";
 export default function ContactSection() {
   const phone1 = "0707471576";
   const phone2 = "0705854576";
-  const whatsappNumber = "254743594486";
+  const whatsappNumber = "254705854576";
 
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
