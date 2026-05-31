@@ -7,20 +7,20 @@ import ContactSection from "@/components/ContactSection";
 export default function Home() {
   return (
     <>
+      {/* NAVBAR (fixed, so content must start below it) */}
       <Navbar />
-       <Hero />
-       <ServiceSchedule />
-       <ChurchMap />
+
+      {/* PAGE CONTENT */}
+      <main className="pt-24">
+
+        <Hero />
+
+        <ServiceSchedule />
+
+        <ChurchMap />
+
         <ContactSection />
 
-      <main className="p-10 text-center">
-        <h1 className="text-4xl font-bold">
-          The Mountain of Breakthrough Church
-        </h1>
-
-        <p className="mt-4 text-lg">
-          Rounder Kariobangi, Nairobi, Kenya
-        </p>
       </main>
     </>
   );
