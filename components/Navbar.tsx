@@ -1,48 +1,16 @@
-"use client";
-
-import { useState } from "react";
-
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
-
   return (
-    <nav className="bg-white shadow-md px-4 py-3">
-      
-      {/* TOP BAR */}
-      <div className="flex justify-between items-center">
-        
-        {/* LOGO */}
-        <h1 className="font-bold text-lg">
-          Mountain of Breakthrough Church
-        </h1>
+    <nav className="flex justify-between p-4 shadow-md">
+      <h1 className="font-bold">
+        Mountain of Breakthrough Church
+      </h1>
 
-        {/* HAMBURGER BUTTON (MOBILE) */}
-        <button
-          className="md:hidden text-2xl"
-          onClick={() => setOpen(!open)}
-        >
-          {open ? "✖" : "☰"}
-        </button>
-
-        {/* DESKTOP MENU */}
-        <div className="hidden md:flex space-x-6">
-          <a href="#" className="hover:text-blue-600">Home</a>
-          <a href="#services" className="hover:text-blue-600">Services</a>
-          <a href="#contact" className="hover:text-blue-600">Contact</a>
-          <a href="#map" className="hover:text-blue-600">Location</a>
-        </div>
+      <div className="space-x-4">
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Location</a>
+        <a href="#">Contact</a>
       </div>
-
-      {/* MOBILE MENU */}
-      {open && (
-        <div className="md:hidden mt-4 flex flex-col space-y-3">
-          <a href="#" className="hover:text-blue-600">Home</a>
-          <a href="#services" className="hover:text-blue-600">Services</a>
-          <a href="#contact" className="hover:text-blue-600">Contact</a>
-          <a href="#map" className="hover:text-blue-600">Location</a>
-        </div>
-      )}
-
     </nav>
   );
 }
