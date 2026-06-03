@@ -1,5 +1,5 @@
 export default function Hero() {
-  const churchMapLink = "https://maps.google.com/?q=-1.260472,36.885917";
+  const churchMapLink = "https://www.google.com/maps/place/1%C2%B015'37.8%22S+36%C2%B053'07.2%22E/@-1.2604901,36.8827694,765m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d-1.2604901!4d36.8853443?hl=en&entry=ttu&g_ep=EgoyMDI2MDUzMS4wIKXMDSoASAFQAw%3D%3D";
 
   return (
     <section
