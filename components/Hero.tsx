@@ -23,7 +23,7 @@ export default function Hero() {
         </p>
 
         <p className="mt-2 text-sm opacity-90">
-          Runda Kariobangi, Nairobi, Kenya
+          Rounder Kariobangi, Nairobi, Kenya
         </p>
 
         <div className="mt-8 flex flex-wrap justify-center gap-4">
