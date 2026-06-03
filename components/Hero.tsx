@@ -1,45 +1,53 @@
 export default function Hero() {
-  const churchMapLink =
-    "https://www.google.com/maps/place/1%C2%B015'37.7%22S+36%C2%B053'09.3%22E/@-1.2604689,36.883328,17z";
+  const churchMapLink = "https://maps.google.com/?q=-1.260472,36.885917";
 
   return (
-    <section className="relative flex flex-col items-center justify-center text-center py-24 px-6 bg-gradient-to-r from-blue-900 to-indigo-800 text-white">
-      
-      <h1 className="text-5xl font-bold leading-tight">
-        The Mountain of Breakthrough Church
-      </h1>
+    <section
+      className="relative flex flex-col items-center justify-center text-center py-24 px-6 text-white min-h-screen bg-cover bg-center overflow-hidden"
+      style={{
+        backgroundImage:
+          "url('https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=1600&q=80')",
+      }}
+    >
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/70"></div>
 
-      <p className="mt-4 text-lg max-w-2xl">
-        A place of Prayer, Deliverance, Worship, and Breakthrough in Christ Jesus.
-      </p>
+      {/* Content */}
+      <div className="relative z-10 max-w-4xl">
+        <h1 className="text-5xl md:text-6xl font-bold">
+          The Mountain of Breakthrough Church
+        </h1>
 
-      <p className="mt-2 text-sm opacity-80">
-        Runda Kariobangi, Nairobi, Kenya
-      </p>
+        <p className="mt-4 text-lg md:text-xl">
+          A place of Prayer, Deliverance, Worship, and Breakthrough in Christ Jesus.
+        </p>
 
-      {/* Buttons */}
-      <div className="mt-8 flex gap-4 flex-wrap justify-center">
-        
-        <a
-          href={churchMapLink}
-          target="_blank"
-          className="px-6 py-3 bg-white text-blue-900 font-semibold rounded-lg hover:bg-gray-200 transition"
-        >
-          📍 Get Directions
-        </a>
+        <p className="mt-2 text-sm opacity-90">
+          Runda Kariobangi, Nairobi, Kenya
+        </p>
 
-        <a
-          href="#services"
-          className="px-6 py-3 border border-white rounded-lg hover:bg-white hover:text-blue-900 transition"
-        >
-          View Services
-        </a>
+        <div className="mt-8 flex flex-wrap justify-center gap-4">
+          <a
+            href={churchMapLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 bg-white text-blue-900 font-semibold rounded-lg hover:bg-gray-200 transition"
+          >
+            📍 Get Directions
+          </a>
+
+          <a
+            href="#services"
+            className="px-6 py-3 border border-white rounded-lg hover:bg-white hover:text-blue-900 transition"
+          >
+            View Services
+          </a>
+        </div>
       </div>
 
-      {/* Floating glow effect */}
-      <div className="absolute w-72 h-72 bg-blue-500 opacity-20 blur-3xl rounded-full top-10 left-10"></div>
-      <div className="absolute w-72 h-72 bg-purple-500 opacity-20 blur-3xl rounded-full bottom-10 right-10"></div>
-
+      {/* Background Glow Effects */}
+      <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500/20 blur-3xl rounded-full pointer-events-none"></div>
+      <div className="absolute bottom-10 right-10 w-72 h-72 bg-purple-500/20 blur-3xl rounded-full pointer-events-none"></div>
     </section>
   );
 }
